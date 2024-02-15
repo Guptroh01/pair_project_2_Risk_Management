@@ -1,5 +1,6 @@
 // import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 import { MatTable } from '@angular/material/table';
 // import { MatPaginator } from '@angular/material/paginator';
@@ -9,8 +10,8 @@ import { MatTable } from '@angular/material/table';
 
 
 const MaterialUI = [
-  // NgModule,
-  // CommonModule,
+  NgModule,
+  CommonModule,
 
   MatTable,
   

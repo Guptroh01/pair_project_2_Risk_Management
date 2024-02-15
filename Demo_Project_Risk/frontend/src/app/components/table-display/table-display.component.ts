@@ -10,6 +10,7 @@ import {MatTableDataSource} from '@angular/material/table'
 
 import { Input, } from '@angular/core';
 import {CdkDragDrop} from '@angular/cdk/drag-drop';
+import { MatTableModule } from '@angular/material/table';
 // import {MatTableDataSource} from '@angular/material/table';
 
 

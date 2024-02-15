@@ -17,7 +17,7 @@ import {A11yModule} from '@angular/cdk/a11y';
 import {Sort, MatSortModule} from '@angular/material/sort';
 // import {MatTableDataSource} from '@angular/material/table'
 
-import {MatIconModule} from '@angular/material/icon';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
 import { ToolbarComponent } from './components/toolbar/toolbar.component'
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -26,8 +26,6 @@ import { MatSelectModule, matSelectAnimations } from '@angular/material/select';
 import { CreateRiskComponent } from './components/create-risk/create-risk.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
-
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -40,32 +38,26 @@ import { HttpClientModule } from '@angular/common/http';
     TableDisplayComponent,
   ],
   imports: [
-
-    ToolbarComponent,   
-    
-   
-
+    ToolbarComponent,
+    MatTableModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MatTableModule,
-      
+
     A11yModule,
     CdkTreeModule,
     CdkTableModule,
     ScrollingModule,
-  
+
     DragDropModule,
     MatSortModule,
     MatIconModule,
-    MatToolbarModule, 
-    MatButtonModule,,
+    MatToolbarModule,
+    MatButtonModule,
 
     HttpClientModule,
-
-
     MatFormFieldModule,
     MatSelectModule,
-    CommonModule,
+    CommonModule, 
     CreateRiskComponent
   ],
   exports: [ToolbarComponent, MatToolbarModule, MatIconModule, MatSortModule, MatFormFieldModule, MatSelectModule, CommonModule, CreateRiskComponent],

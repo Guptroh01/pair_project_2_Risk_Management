@@ -1,0 +1,42 @@
+<form [formGroup]="createRiskForm" (ngSubmit)="createRisk()">
+
+    <mat-form-field appearance="outline" color="accent" class="custom-form-field">
+        <mat-label>Risk ID</mat-label>
+        <input matInput type="number" formControlName="risk_id" placeholder="Enter the Risk ID" required>
+    </mat-form-field>
+
+    <br/>
+
+    <mat-form-field appearance="outline" color="accent" class="custom-form-field">
+        <mat-label>Risk Category</mat-label>
+        <input matInput type="text" formControlName="risk_category" placeholder="Enter the Risk Category" required>
+    </mat-form-field>
+    
+    <br/>
+
+    <mat-form-field appearance="outline" color="accent" class="custom-form-field">
+        <mat-label>Hazards</mat-label>
+        <textarea matInput formControlName = "hazards" placeholder="Enter the Hazards" required></textarea>
+    </mat-form-field>
+
+    <br/>
+
+    <mat-form-field appearance="outline" color="accent" class="custom-form-field">
+        <mat-label>Risks</mat-label>
+        <textarea matInput formControlName = "risks" placeholder="Enter the Risks" required></textarea>
+    </mat-form-field>
+
+    <br/>
+
+    <mat-form-field appearance="outline" color="accent" class="custom-form-field">
+        <mat-label>Mitigation Status</mat-label>
+        <textarea matInput formControlName = "risks" placeholder="Enter the Risks" required></textarea>
+    </mat-form-field>
+
+    <br/>
+
+    
+    <button mat-raised-button color="primary">Submit</button>
+
+
+</form>

@@ -18,7 +18,15 @@ import {
 
 import {Sort, MatSortModule} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table'
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { ToolbarComponent } from './components/toolbar/toolbar.component'
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatSelectModule, matSelectAnimations } from '@angular/material/select';
+import { CreateRiskComponent } from './components/create-risk/create-risk.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
  
 @NgModule({
@@ -29,19 +37,22 @@ import {MatIconModule} from '@angular/material/icon'
   ],
   imports: [
     
-
+    ToolbarComponent,
     BrowserModule,
     BrowserAnimationsModule,
     MatTableModule,
     CdkDrag,
     CdkDropListGroup,
     MatSortModule,
-    MatIconModule
-    
-    
-    
-    
+    MatIconModule,
+    MatToolbarModule, 
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    CommonModule,
+    CreateRiskComponent
   ],
+  exports: [ToolbarComponent, MatToolbarModule, MatIconModule, MatSortModule, MatFormFieldModule, MatSelectModule, CommonModule, CreateRiskComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

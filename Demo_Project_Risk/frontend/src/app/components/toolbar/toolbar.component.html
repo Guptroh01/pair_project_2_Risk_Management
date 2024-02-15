@@ -1,0 +1,16 @@
+<mat-toolbar color = "primary">
+    <mat-form-field> 
+        <mat-select [value]="'filter1'">
+            <mat-option value = "filter1"> Risk By ID</mat-option>
+            <mat-option value = "filter2"> Risk By Category</mat-option>
+            <mat-option value = "filter3"> Risk By Mitigation Score</mat-option>
+        </mat-select>
+    </mat-form-field> 
+    
+    <span class = "spacer"></span>
+
+    <button mat-button color="warn" (click)="createRisk()"> Create Risk </button>
+</mat-toolbar>
+
+
+ 

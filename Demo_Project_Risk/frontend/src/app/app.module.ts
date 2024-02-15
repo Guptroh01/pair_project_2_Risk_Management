@@ -71,5 +71,6 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [ToolbarComponent, MatToolbarModule, MatIconModule, MatSortModule, MatFormFieldModule, MatSelectModule, CommonModule, CreateRiskComponent],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

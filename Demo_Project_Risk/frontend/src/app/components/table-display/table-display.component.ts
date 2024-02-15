@@ -7,6 +7,7 @@ import {MatSort, Sort, MatSortModule} from '@angular/material/sort';
 import { CdkDrag, CdkDragMove, CdkDragStart, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
 
 import {MatTableDataSource} from '@angular/material/table'
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 
 import { Input, } from '@angular/core';
 import {CdkDragDrop} from '@angular/cdk/drag-drop';
@@ -62,6 +63,7 @@ const  riskData:Risk[] = [
   selector: 'app-table-display',
   templateUrl: './table-display.component.html',
   styleUrls: ['./table-display.component.css'],
+  
  
  
 

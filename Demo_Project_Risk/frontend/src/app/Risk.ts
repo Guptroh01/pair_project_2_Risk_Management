@@ -1,13 +1,13 @@
 export interface Risk {
-    Risk_id:number;
-    Risk_Category:string;
-    Hazards:string[];
-    Risks:string[];
-    Mitigation_Status:boolean;
-    Pre_mitigation_score:number;
-    Post_mitigation_score:number;
+    risk_id:number;
+    risk_category:string;
+    hazards:string[];
+    risks:string[];
+    mitigation_status:boolean;
+    pre_mitigation_risk_score:number;
+    post_mitigation_risk_score:number;
 
-    Barriers: string[];
+    barriers: string[];
 
 
 

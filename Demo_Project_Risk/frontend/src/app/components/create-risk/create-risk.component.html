@@ -1,11 +1,14 @@
+<div>
+<h2 mat-dialog-title class="custom-title"> Create Risk </h2>
+<div mat-dialog-content class="center-content">
 <form [formGroup]="createRiskForm" (ngSubmit)="createRisk()">
 
-    <mat-form-field appearance="outline" color="accent" class="custom-form-field">
+    <!-- <mat-form-field appearance="outline" color="accent" class="custom-form-field">
         <mat-label>Risk ID</mat-label>
         <input matInput type="number" formControlName="risk_id" placeholder="Enter the Risk ID" required>
     </mat-form-field>
 
-    <br/>
+    <br/> -->
 
     <mat-form-field appearance="outline" color="accent" class="custom-form-field">
         <mat-label>Risk Category</mat-label>
@@ -28,15 +31,52 @@
 
     <br/>
 
-    <mat-form-field appearance="outline" color="accent" class="custom-form-field">
+    <mat-form-field> 
         <mat-label>Mitigation Status</mat-label>
-        <textarea matInput formControlName = "risks" placeholder="Enter the Risks" required></textarea>
-    </mat-form-field>
+        <mat-select formControlName = "mitigation_status" (change) = "changeEvent($event)">
+            <mat-option *ngFor="let mitigation_status of mitigation_status" [value]="mitigation_status.value">
+                {{mitigation_status.viewValue}}
+            </mat-option> 
+        </mat-select>
+    </mat-form-field> 
 
     <br/>
 
+    <mat-form-field> 
+        <mat-label>Pre-Mitigation Risk Score</mat-label>
+        <mat-select formControlName = "pre_mitigation_risk_score" (change) = "changeEvent($event)">
+            <mat-option *ngFor="let mitigation_risk_score of mitigation_risk_scores" [value]="mitigation_risk_score.value">
+                {{mitigation_risk_score.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
     
-    <button mat-raised-button color="primary">Submit</button>
+    <br/>
 
+    <mat-form-field> 
+        <mat-label>Post-Mitigation Risk Score</mat-label>
+        <mat-select formControlName = "post_mitigation_risk_score" (change) = "changeEvent($event)">
+            <mat-option *ngFor="let mitigation_risk_score of mitigation_risk_scores" [value]="mitigation_risk_score.value">
+                {{mitigation_risk_score.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <br/>
 
+    <mat-form-field appearance="outline" color="accent" class="custom-form-field">
+        <mat-label>Barriers</mat-label>
+        <textarea matInput formControlName = "barriers" placeholder="Enter the Barriers" required></textarea>
+    </mat-form-field>
+
+    <br/>
+    
 </form>
+</div>
+<div mat-dialog-actions class="custom-dialog">
+    
+    <button mat-button (click)="closeDialog()">Cancel</button>
+    <button mat-button color="primary" (click)="submitForm()">Create</button>
+</div>
+
+</div>

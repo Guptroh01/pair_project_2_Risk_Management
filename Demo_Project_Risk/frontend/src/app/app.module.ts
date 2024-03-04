@@ -27,7 +27,7 @@ import { CreateRiskComponent } from './components/create-risk/create-risk.compon
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
 
 // import {MaterialModule} from './material/material.module'
  
@@ -58,9 +58,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatSelectModule,
     CommonModule, 
-    CreateRiskComponent
+    CreateRiskComponent,
+    MatDialogModule
   ],
-  exports: [ToolbarComponent, MatToolbarModule, MatIconModule, MatSortModule, MatFormFieldModule, MatSelectModule, CommonModule, CreateRiskComponent],
+  exports: [ToolbarComponent, MatToolbarModule, MatIconModule, MatSortModule, MatFormFieldModule, MatSelectModule, CommonModule, CreateRiskComponent, MatDialogModule],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -44,6 +44,8 @@ export class CreateRiskComponent {
   // }
 
 createRisk() {
-  console.log("Create Risk Called!");
+  console.log("Create Risk Called!" ,this.createRiskForm);
+
+
 }
 }

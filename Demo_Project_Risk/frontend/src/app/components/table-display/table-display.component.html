@@ -26,7 +26,6 @@ matSort  cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="d
   </ng-container>
 
 
-
   <ng-container matColumnDef="mitigation_status">
     <mat-header-cell *matHeaderCellDef cdkDrag><mat-icon cdkDragHandle > drag_indicator</mat-icon>  Mitigation Status </mat-header-cell>
     <mat-cell *matCellDef="let element" [ngSwitch]="element.mitigation_status">  <div *ngSwitchCase="false">Closed</div>

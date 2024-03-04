@@ -1,8 +1,6 @@
 
 import { Component, ViewChild, AfterViewInit, Injectable, OnInit } from '@angular/core';
 import { Risk } from 'src/app/Risk';
-// import {LiveAnnouncer} from '@angular/cdk/a11y';
-// import { MatSort,Sort} from '@angular/material/sort';
 import { MatSort, Sort } from '@angular/material/sort';
 import { CdkDrag, CdkDragMove, CdkDragStart, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
 
@@ -10,15 +8,8 @@ import { MatTableDataSource } from '@angular/material/table'
 import { MatPaginator } from '@angular/material/paginator';
 
 
-import { Input, } from '@angular/core';
+import { Input } from '@angular/core';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
-
-// import {MatTableDataSource} from '@angular/material/table';
-
-// import { CdkDrag } from '@angular/cdk/drag-drop';
-
-
-
 
 const risksData: Risk[] = [
 

@@ -10,8 +10,9 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component'
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { MaterialModule } from './material/material.module';
-
+// import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import {MaterialModule} from './material/material.module'
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +26,17 @@ import { MaterialModule } from './material/material.module';
     MaterialModule,
     HttpClientModule,
     CommonModule, 
-    CreateRiskComponent
+    CreateRiskComponent,
+//     MatDialogModule
   ],
-  exports: [ToolbarComponent, CommonModule, CreateRiskComponent,MaterialModule],
+
+  exports: [ToolbarComponent, 
+            CommonModule, 
+            CreateRiskComponent,
+            MaterialModule,
+//             MatDialogModule]
+           ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

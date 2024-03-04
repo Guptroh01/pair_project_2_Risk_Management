@@ -33,12 +33,14 @@
 
     <mat-form-field> 
         <mat-label>Mitigation Status</mat-label>
+
         <mat-select formControlName = "mitigation_status" (change) = "changeEvent($event)">
             <mat-option *ngFor="let mitigation_status of mitigation_status" [value]="mitigation_status.value">
                 {{mitigation_status.viewValue}}
             </mat-option> 
         </mat-select>
     </mat-form-field> 
+
 
     <br/>
 

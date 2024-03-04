@@ -75,7 +75,7 @@ export class CreateRiskComponent implements OnInit{
     this.dialogRef.close(this.createRiskForm.value);
   }
 
-createRisk() {
-  console.log("Create Risk Called!",this.createRiskForm);
-}
+  createRisk() {
+    console.log("Create Risk Called!",this.createRiskForm);
+  }
 }

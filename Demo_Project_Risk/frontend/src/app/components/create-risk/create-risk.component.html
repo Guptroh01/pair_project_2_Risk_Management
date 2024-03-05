@@ -1,4 +1,5 @@
-<div>
+[3:56 PM] Maloo, Mayank
+<div class="container">
 <h2 mat-dialog-title class="custom-title"> Create Risk </h2>
 <div mat-dialog-content class="center-content">
 <form [formGroup]="createRiskForm" (ngSubmit)="createRisk()">
@@ -7,34 +8,34 @@
         <mat-label>Risk Category</mat-label>
         <input matInput type="text" formControlName="risk_category" placeholder="Enter the Risk Category" required>
     </mat-form-field>
-    
+   
     <br/>
-
+ 
     <mat-form-field appearance="outline" color="accent" class="custom-form-field">
         <mat-label>Hazards</mat-label>
         <textarea matInput formControlName = "hazards" placeholder="Enter the Hazards" required></textarea>
     </mat-form-field>
-
+ 
     <br/>
-
+ 
     <mat-form-field appearance="outline" color="accent" class="custom-form-field">
         <mat-label>Risks</mat-label>
         <textarea matInput formControlName = "risks" placeholder="Enter the Risks" required></textarea>
     </mat-form-field>
-
+ 
     <br/>
-
-    <mat-form-field class="custom-form-field"> 
+ 
+    <mat-form-field class="custom-form-field">
         <mat-label>Mitigation Status</mat-label>
-
+ 
         <mat-select formControlName = "mitigation_status" (change) = "changeEvent($event)">
             <mat-option *ngFor="let mitigation_status of mitigation_status" [value]="mitigation_status.value">
                 {{mitigation_status.viewValue}}
-            </mat-option> 
+            </mat-option>
         </mat-select>
-    </mat-form-field> 
-
-
+    </mat-form-field>
+ 
+ 
     <br/>
 
     <mat-form-field class="custom-form-field"> 
@@ -45,7 +46,7 @@
             </mat-option>
         </mat-select>
     </mat-form-field>
-    
+   
     <br/>
 
     <mat-form-field class="custom-form-field"> 
@@ -56,22 +57,33 @@
             </mat-option>
         </mat-select>
     </mat-form-field>
-    
+   
     <br/>
-
+ 
     <mat-form-field appearance="outline" color="accent" class="custom-form-field">
         <mat-label>Barriers</mat-label>
         <textarea matInput formControlName = "barriers" placeholder="Enter the Barriers" required></textarea>
     </mat-form-field>
-
+ 
     <br/>
-    
+
+    <mat-form-field appearance="outline" color="accent" class="custom-form-field">
+        // this is the extra column for edit and delete 
+        
+        <mat-label>Barriers</mat-label>
+        <button> <mat-icon>circle</mat-icon></button>
+    </mat-form-field>
+ 
+    <br/>
+ 
+    <div mat-dialog-actions class="custom-dialog">
+   
+        <button mat-raised-button color="warn" (click)="closeDialog()">Cancel</button>
+        <button mat-raised-button color="primary" (click)="submitForm()">Create</button>
+    </div>
+   
+   
 </form>
 </div>
-<div mat-dialog-actions class="custom-dialog">
-    
-    <button mat-button (click)="closeDialog()">Cancel</button>
-    <button mat-button color="primary" (click)="submitForm()">Create</button>
-</div>
-
+ 
 </div>

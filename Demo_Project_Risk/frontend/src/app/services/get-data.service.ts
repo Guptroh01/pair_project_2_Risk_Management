@@ -12,8 +12,8 @@ export class GetDataService implements OnInit {
   url:any = 'http://localhost:3000/risks';
 
   ngOnInit(): void {
+   
   }
-
 
   createRisk(data: any): Observable<any>{
     const hazardsArray = Array.isArray(data.hazards) ? data.hazards : [data.hazards];
@@ -30,4 +30,6 @@ export class GetDataService implements OnInit {
     return this.http.post(this.url, postdata);
   }
 
-}
+
+  }
+

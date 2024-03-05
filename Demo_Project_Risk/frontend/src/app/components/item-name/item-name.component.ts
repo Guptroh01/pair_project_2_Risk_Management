@@ -21,6 +21,15 @@ export class ItemNameComponent implements OnInit {
 
   constructor(private dataService:GetDataService){}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    
+  }
+
+
+ 
+
+
+
+
 
 }

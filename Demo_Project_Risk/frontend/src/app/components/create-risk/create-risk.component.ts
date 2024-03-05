@@ -27,6 +27,7 @@ interface Mitigation_Status{
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    // MatIconModule,  // this is added to remove errors in mat-icon 
     CommonModule],
   templateUrl: './create-risk.component.html',
   styleUrls: ['./create-risk.component.css'],

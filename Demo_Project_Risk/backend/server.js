@@ -8,11 +8,12 @@ require('dotenv').config()
 const app = express()
 
 
-app.use(bodyParser.json())
-app.use(express.urlencoded({extended: true}))
+ app.use(bodyParser.json())
+ app.use(express.urlencoded({extended: true}))
 
-app.use(cors());
+app.use(cors())
 app.use('/risks', riskRoute);
+
 
 Risk.sync({force: false})
 .then(() => {

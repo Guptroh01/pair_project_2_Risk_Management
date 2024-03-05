@@ -2,13 +2,16 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const riskRoute = require('./routes/riskRoute')
 const Risk = require('./models/RiskModel')
+const cors = require('cors')
 require('dotenv').config()
 
- const app = express()
+const app = express()
 
- app.use(bodyParser.json())
- app.use(express.urlencoded({extended: true}))
 
+app.use(bodyParser.json())
+app.use(express.urlencoded({extended: true}))
+
+app.use(cors());
 app.use('/risks', riskRoute);
 
 Risk.sync({force: false})

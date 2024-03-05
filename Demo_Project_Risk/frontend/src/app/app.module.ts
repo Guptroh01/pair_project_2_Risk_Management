@@ -10,8 +10,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component'
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-// import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
-import {MaterialModule} from './material/material.module'
+import {MaterialModule} from './material/material.module';
+import { MatIcon } from '@angular/material/icon';
  
 @NgModule({
   declarations: [
@@ -27,14 +27,12 @@ import {MaterialModule} from './material/material.module'
     HttpClientModule,
     CommonModule, 
     CreateRiskComponent,
-//     MatDialogModule
   ],
 
   exports: [ToolbarComponent, 
             CommonModule, 
             CreateRiskComponent,
             MaterialModule,
-//             MatDialogModule]
            ],
 
   providers: [],

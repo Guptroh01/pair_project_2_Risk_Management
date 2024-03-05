@@ -11,9 +11,10 @@ import {CdkTreeModule} from '@angular/cdk/tree';
 import {A11yModule} from '@angular/cdk/a11y';
 import {Sort, MatSortModule} from '@angular/material/sort';
 import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule,MatIcon } from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatSelectModule, matSelectAnimations } from '@angular/material/select';
+
 
 const MaterialUI = [
   MatButtonModule,
@@ -29,12 +30,12 @@ const MaterialUI = [
   MatPaginatorModule,
   MatSortModule,
   MatSelectModule,
-  MatDialogModule
+  MatDialogModule,
 ];
 
 
 @NgModule({
-  imports: [MaterialUI  ],
+  imports: [MaterialUI],
   exports:[MaterialUI]
 })
 

@@ -4,7 +4,6 @@ const sequelize = require('../config/db');
 const Risk = sequelize.define('Risk', {
     risk_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },

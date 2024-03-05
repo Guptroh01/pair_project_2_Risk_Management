@@ -1,22 +1,32 @@
+
 .custom-form-field{
     padding: 5px;
     width: 400px;
-    
-    
+   
+   
 }
 .custom-title{
     text-align: center;
     padding: 10px;
 }
-
+ 
+.container{
+    position: relative;
+}
 .center-content{
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
+  position: relative;
 }
-
+ 
 .custom-dialog{
+    position: relative;
     display: flex;
     justify-content: flex-end;
+    right: 0;
+    top: -10px;
+    gap: 0.5em;
 }
+ 

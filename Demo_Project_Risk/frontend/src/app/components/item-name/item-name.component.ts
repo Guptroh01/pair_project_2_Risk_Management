@@ -22,34 +22,6 @@ export class ItemNameComponent implements OnInit {
   constructor(private dataService:GetDataService){}
 
   ngOnInit(): void {
-    this.dataService.getStudents().subscribe((res)=>{
-      console.log(res);
-
-
-      this.data = res.products;
-
-      this.data.map((product:any) =>{
-        console.log(product.title)
-        this.arr.push(product.title)
-      })
-      // console.log(`data array ${this.data}`)
-
-      
-    this.newArr =this.arr.slice(0,2);
-
-    console.log(this.newArr)
-     
-
-
-    })
-    
   }
-
-
- 
-
-
-
-
-
+     
 }

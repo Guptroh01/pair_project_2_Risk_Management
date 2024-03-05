@@ -8,6 +8,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
 import { MatOption } from '@angular/material/core';
 import { CommonModule } from '@angular/common';
+import {GetDataService} from '../../services/get-data.service';
+import { MatIconModule } from '@angular/material/icon';
+
+
 
 interface Mitigation_Risk_Score{
   value: number;
@@ -26,6 +30,7 @@ interface Mitigation_Status{
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatIconModule,  // this is added to remove errors in mat-icon 
     CommonModule],
   templateUrl: './create-risk.component.html',
   styleUrls: ['./create-risk.component.css'],
@@ -45,15 +50,12 @@ export class CreateRiskComponent implements OnInit{
   changeEvent(event: any){
     console.log(event.value);
   }
-  constructor(public dialogRef: MatDialogRef<CreateRiskComponent>) {}
+  constructor(public dialogRef: MatDialogRef<CreateRiskComponent> ,private GetDataService :GetDataService) {}
 
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {  }
 
   createRiskForm = new FormGroup({
-    risk_id: new FormControl('',Validators.required),
     risk_category: new FormControl('',Validators.required),
     hazards: new FormControl( '',Validators.required),
     risks: new FormControl('',Validators.required),
@@ -72,6 +74,11 @@ export class CreateRiskComponent implements OnInit{
   submitForm(): void {
     console.log("Form Created!!!!!");
     console.log(this.createRiskForm.value);
+    this.GetDataService.createRisk(this.createRiskForm.value).subscribe((res:any)=>{
+      console.log(`Data submitted ${res}`)
+    },err=>{
+      console.log(err);
+    })
     this.dialogRef.close(this.createRiskForm.value);
   }
 

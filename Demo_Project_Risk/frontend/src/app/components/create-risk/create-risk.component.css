@@ -10,9 +10,7 @@
     padding: 10px;
 }
  
-.container{
-    position: relative;
-}
+
 .center-content{
   display: flex;
   justify-content: center;
@@ -24,9 +22,6 @@
 .custom-dialog{
     position: relative;
     display: flex;
-    justify-content: flex-end;
-    right: 0;
-    top: -10px;
-    gap: 0.5em;
+   
 }
  

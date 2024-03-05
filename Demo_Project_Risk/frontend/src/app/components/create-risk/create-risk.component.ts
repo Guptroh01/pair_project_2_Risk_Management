@@ -9,6 +9,7 @@ import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
 import { MatOption } from '@angular/material/core';
 import { CommonModule } from '@angular/common';
 import {GetDataService} from '../../services/get-data.service' 
+import {MatIconModule } from '@angular/material/icon';
 
 interface Mitigation_Risk_Score{
   value: number;
@@ -27,7 +28,7 @@ interface Mitigation_Status{
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    // MatIconModule,  // this is added to remove errors in mat-icon 
+    MatIconModule,  
     CommonModule],
   templateUrl: './create-risk.component.html',
   styleUrls: ['./create-risk.component.css'],
